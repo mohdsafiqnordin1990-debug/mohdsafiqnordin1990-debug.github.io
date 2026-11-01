@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Returning to Product Video Poster</title>
+<style>body{font-family:system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 16px;line-height:1.6}</style>
+</head>
+<body>
+<h1>Returning to the app...</h1>
+<p>If nothing happens, make sure the app is running on this device, then <a id="go" href="#">tap here</a>.</p>
+<script>
+  // Hands the TikTok login result (code, state) to the app running on this same device.
+  var target = "http://localhost:8000/tiktok/callback" + window.location.search;
+  document.getElementById("go").href = target;
+  window.location.replace(target);
+</script>
+</body>
+</html>
